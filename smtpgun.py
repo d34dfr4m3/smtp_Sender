@@ -43,7 +43,6 @@ def payload(smtpObj,user,mfile,field,dstfile):
   dstaddress=[]
   print("[+] Loading info from csv file:", mfile )
   with open(dstfile,'r') as csvfile:
-    #spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     reader = csv.DictReader(csvfile)
     for row in reader:
         dstaddress.append(row[field])      
